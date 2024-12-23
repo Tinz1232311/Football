@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.WebCki</groupId> <!-- Thay "FruitShop" bằng tên nhóm của bạn -->
+    <artifactId>Football</artifactId> <!-- Tên của dự án -->
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging> <!-- Tạo WAR file cho web application -->
+
+    <name>WebCki</name> <!-- Tên dự án -->
+    <description>A football adminstrator web management.</description> <!-- Mô tả dự án -->
+
+    <repositories>
+        <!-- Kho Maven chính -->
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <release>17</release> <!-- Sử dụng Java 17 (hoặc thay đổi theo version bạn đang dùng) -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version> <!-- Phiên bản plugin WAR -->
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml> <!-- Thêm cấu hình này nếu bạn không dùng web.xml -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <!-- Các dependencies cần thiết cho dự án của bạn -->
+
+        <!-- Tomcat JSP API -->
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jsp-api</artifactId>
+            <version>10.1.28</version>
+        </dependency>
+
+        <!-- Servlet API (Jakarta Servlet) -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope> <!-- Đây là phần scope cho servlet API -->
+        </dependency>
+
+        <!-- Jakarta EE API -->
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>10.0.0</version> <!-- Phiên bản Jakarta EE -->
+            <scope>provided</scope> <!-- Đây là phần scope cho Jakarta EE -->
+        </dependency>
+
+        <!-- MySQL Connector (JDBC) -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.33</version>
+        </dependency>
+
+        <!-- Jakarta Mail API -->
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>jakarta.mail</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
+         <!-- Google API Client -->
+	    <dependency>
+	        <groupId>com.google.api-client</groupId>
+	        <artifactId>google-api-client</artifactId>
+	        <version>1.34.0</version>
+	    </dependency>
+	
+	    <!-- Google OAuth2 -->
+	    <dependency>
+	        <groupId>com.google.auth</groupId>
+	        <artifactId>google-auth-library-oauth2-http</artifactId>
+	        <version>1.13.0</version>
+	    </dependency>
+	    
+	    <!-- Thư viện HTTP của Google -->
+	    <dependency>
+	        <groupId>com.google.http-client</groupId>
+	        <artifactId>google-http-client-gson</artifactId>
+	        <version>1.45.0</version>
+	    </dependency>
+	
+		<!-- Jackson JSON Processor -->
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-core</artifactId>
+	        <version>2.13.1</version> <!-- Use the appropriate version -->
+	    </dependency>
+	
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-databind</artifactId>
+	        <version>2.13.1</version> <!-- Use the appropriate version -->
+	    </dependency>	
+	    
+		 <dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>4.5.13</version> <!-- Cập nhật lên phiên bản mới hơn -->
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpcore</artifactId>
+		    <version>4.4.13</version> <!-- Cập nhật phiên bản tương thích -->
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>fluent-hc</artifactId>
+		    <version>4.5.13</version> <!-- Cập nhật lên phiên bản tương thích với httpclient -->
+		</dependency>
+				
+    </dependencies>
+
+</project>
